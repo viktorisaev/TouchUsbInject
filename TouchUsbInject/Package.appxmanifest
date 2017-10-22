@@ -5,7 +5,8 @@
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
-  IgnorableNamespaces="uap mp iot">
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="rescap uap mp iot">
 
   <Identity
     Name="TouchUsbInject-uwp"
@@ -52,5 +53,18 @@
 
   <Capabilities>
     <Capability Name="internetClient" />
+
+    <!--Mouse injector-->
+    <rescap:Capability Name="inputInjectionBrokered" />
+
+    <DeviceCapability Name="usb">
+
+      <!--ETP 4500UG-X-->
+      <Device Id="vidpid:0EEF 0001">
+        <Function Type="name:vendorSpecific"/>
+      </Device>
+
+    </DeviceCapability>
+
   </Capabilities>
 </Package>
