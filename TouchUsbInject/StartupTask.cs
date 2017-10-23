@@ -19,10 +19,10 @@ namespace TouchUsbInject
 {
     public sealed class StartupTask : IBackgroundTask
     {
-        private UInt32 xMin = 90;
+        private UInt32 xMin = 140;
         private UInt32 xMax = 3900;
-        private UInt32 yMin = 130;
-        private UInt32 yMax = 3600;
+        private UInt32 yMin = 280;
+        private UInt32 yMax = 3650;
 
         // screen resolution in mouse units to inject
         private UInt32 xScreen = 65535;
