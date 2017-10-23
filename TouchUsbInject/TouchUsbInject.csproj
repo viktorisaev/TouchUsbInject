@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{45e664be-7d22-48bc-b37d-6a6e873cb518}</ProjectGuid>
+    <ProjectGuid>{45E664BE-7D22-48BC-B37D-6A6E873CB518}</ProjectGuid>
     <OutputType>winmdobj</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TouchUsbInject</RootNamespace>
@@ -18,13 +18,9 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <AllowCrossPlatformRetargeting>false</AllowCrossPlatformRetargeting>
-
-    
     <PackageCertificateKeyFile>TouchUsbInject_TemporaryKey.pfx</PackageCertificateKeyFile>
-    
     <AppxPackage>true</AppxPackage>
     <ContainsStartupTask>true</ContainsStartupTask>
-    
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -107,19 +103,36 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    
     <None Include="TouchUsbInject_TemporaryKey.pfx" />
-    
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png"> <InProject>false</InProject> </Content>
-    <Content Include="Assets\SplashScreen.scale-200.png" > <InProject>false</InProject> </Content>
-    <Content Include="Assets\Square150x150Logo.scale-200.png" > <InProject>false</InProject> </Content>
-    <Content Include="Assets\Square44x44Logo.scale-200.png" > <InProject>false</InProject> </Content>
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" > <InProject>false</InProject> </Content>
-    <Content Include="Assets\StoreLogo.png" > <InProject>false</InProject> </Content>
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" > <InProject>false</InProject> </Content>
+    <Content Include="Assets\LockScreenLogo.scale-200.png">
+      <InProject>false</InProject>
+    </Content>
+    <Content Include="Assets\SplashScreen.scale-200.png">
+      <InProject>false</InProject>
+    </Content>
+    <Content Include="Assets\Square150x150Logo.scale-200.png">
+      <InProject>false</InProject>
+    </Content>
+    <Content Include="Assets\Square44x44Logo.scale-200.png">
+      <InProject>false</InProject>
+    </Content>
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <InProject>false</InProject>
+    </Content>
+    <Content Include="Assets\StoreLogo.png">
+      <InProject>false</InProject>
+    </Content>
+    <Content Include="Assets\Wide310x150Logo.scale-200.png">
+      <InProject>false</InProject>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsIoT, Version=10.0.15063.0">
+      <Name>Windows IoT Extensions for the UWP</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
